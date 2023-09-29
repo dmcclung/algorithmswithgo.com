@@ -21,13 +21,23 @@ func TestValidWordAbbreviation(t *testing.T) {
 			"a2e",
 			false,
 		},
+		{
+			"a",
+			"01",
+			false,
+		},
+		{
+			"word",
+			"3e",
+			false,
+		},
 	}
 
-	for _, test := range tests {
-		t.Run(fmt.Sprintf("%v word and abbr %v", test.word, test.abbr), func(t *testing.T) {
-			got := ValidWordAbbreviation(test.word, test.abbr)
-			if got != test.want {
-				t.Fatalf("ValidWordAbbreviation() = %v; want %v", got, test.want)
+	for _, tc := range tests {
+		t.Run(fmt.Sprintf("%v word and abbr %v", tc.word, tc.abbr), func(t *testing.T) {
+			got := ValidWordAbbreviation(tc.word, tc.abbr)
+			if got != tc.want {
+				t.Fatalf("ValidWordAbbreviation() = %v; want %v", got, tc.want)
 			}
 		})
 	}
