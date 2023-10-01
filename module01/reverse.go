@@ -3,12 +3,11 @@ package module01
 // Reverse will return the provided word in reverse
 // order. Eg:
 //
-//   Reverse("cat") => "tac"
-//   Reverse("alphabet") => "tebahpla"
-//
+//	Reverse("cat") => "tac"
+//	Reverse("alphabet") => "tebahpla"
 func TwoPointerReverse(word string) string {
 	str := []rune(word)
-	i, j := 0, len(str) - 1
+	i, j := 0, len(str)-1
 
 	for i < j {
 		str[i], str[j] = str[j], str[i]

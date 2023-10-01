@@ -6,9 +6,8 @@ package module01
 //
 // Eg:
 //
-//   DecToBase(14, 16) => "E"
-//   DecToBase(14, 2) => "1110"
-//
+//	DecToBase(14, 16) => "E"
+//	DecToBase(14, 2) => "1110"
 func DecToBase(dec, base int) string {
 	if dec == 0 {
 		return "0"

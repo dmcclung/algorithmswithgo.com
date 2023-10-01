@@ -6,8 +6,9 @@ package module01
 //
 // Eg:
 //
-//   BaseToBase("E", 16, 2) => "1110"
-//
+//	BaseToBase("E", 16, 2) => "1110"
 func BaseToBase(value string, base, newBase int) string {
-	return ""
+	// Convert to decimal and then convert from decimal to base
+	dec := BaseToDec(value, base)
+	return DecToBase(dec, newBase)
 }

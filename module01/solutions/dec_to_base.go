@@ -8,9 +8,8 @@ import "strings"
 //
 // Eg:
 //
-//   DecToBase(14, 16) => "E"
-//   DecToBase(14, 2) => "1110"
-//
+//	DecToBase(14, 16) => "E"
+//	DecToBase(14, 2) => "1110"
 func DecToBase(dec, base int) string {
 	const charset = "0123456789ABCDEF"
 	var res string

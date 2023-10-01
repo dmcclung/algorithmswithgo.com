@@ -7,9 +7,8 @@ import "fmt"
 //
 // Eg:
 //
-//   BaseToDec("E", 16) => 14
-//   BaseToDec("1110", 2) => 14
-//
+//	BaseToDec("E", 16) => 14
+//	BaseToDec("1110", 2) => 14
 func BaseToDec(value string, base int) int {
 	const charset = "0123456789ABCDEF"
 	res := 0
