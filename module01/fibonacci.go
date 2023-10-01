@@ -25,5 +25,37 @@ package module01
 //   Fibonacci(14) => 377
 //
 func Fibonacci(n int) int {
-	return 0
+	if n == 0 {
+		return 0
+	} else if n == 1 {
+		return 1
+	} else {
+		return Fibonacci(n - 1) + Fibonacci(n - 2)
+	}
+}
+
+func FibonacciIter(n int) int {
+	stack := []int{}
+	
+	if n == 0 {
+		return 0
+	} else if n == 1 {
+		return 1
+	} else {
+		stack = append(stack, n)
+	}
+
+	var sum int
+	for len(stack) > 0 {
+		top := stack[len(stack) - 1]
+		stack = stack[:len(stack) - 1]
+
+		if top == 0 || top == 1 {
+			sum += top
+		} else {
+			stack = append(stack, top - 1)
+			stack = append(stack, top - 2)
+		}
+	}
+	return sum
 }
