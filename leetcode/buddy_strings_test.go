@@ -7,9 +7,9 @@ import (
 
 func TestBuddyStrings(t *testing.T) {
 	tests := []struct {
-		s string
+		s    string
 		goal string
-		want       bool
+		want bool
 	}{
 		{
 			"ab",
